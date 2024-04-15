@@ -1,0 +1,368 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Orbitron", sans-serif;
+}
+
+
+body {
+  font-family: "Orbitron", sans-serif;
+  line-height: 1.4;
+  color: #333;
+  background-color: #ffffff;
+  background: rgb(33,209,246);
+  background: linear-gradient(180deg, rgba(33,209,246,1) 0%, rgba(11,132,175,1) 64%, rgba(0,57,112,1) 100%);
+}
+
+
+
+/* Estilização segue os padrões MOBILE-FIRST */
+/* Estilos para mobile (fora de qualquer media query) */
+/* inicio Cabeçalho e navegação / cima para baixo esquerda para direita */
+
+.logo img {
+  width: 5vh;
+  border-radius: 50px;
+  margin-left: 25px;
+  box-shadow: -15px 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.header {
+  background-color: rgb(17, 165, 207);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  width: 100%;
+  position: fixed;
+  /* header fixo*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar a {
+  display: none;
+}
+
+.menu a {
+  display: none;
+}
+
+/* Menu hamburguer + efeitos  */
+.ham-menu {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9vw;  /* dimimuir em telas menores */
+  width: 9vw;  /* dimimuir em telas menores */
+  position: relative;
+  margin-left: auto;
+  /* Alinha o menu hambúrguer à direita */
+  margin-right: 1rem;
+  /* Espaçamento da borda direita do cabeçalho */
+}
+
+.ham-menu span {
+  height: 2.9px; /* dimimuir em telas menores */
+  width: 90%; /* dimimuir em telas menores */
+  background-color: #ffffff;
+  position: absolute;
+  /*margin: auto;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 85px;
+  transition: 0.5s ease;
+}
+
+/* efeitos mudança menu 3 palito = para X  */
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+/* tela clique do menu - aba escondida  */
+.off-screen-menu {
+  background-color: rgba(25, 25, 246, 0.057);
+  backdrop-filter: blur(20px);
+  box-shadow: -15px 0 10px rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  width: 75%;
+  max-width: 440px;
+  position: fixed;
+  top: 0;
+  right: -400vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  font-size: 1.3rem;
+  transition: 0.5s ease;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+.off-screen-menu .menu>a {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  font-size: 1.20rem;
+  /* 20px se o tamanho base for 16px */
+  font-weight: bold;
+  /* ou 700 */
+  padding: 0.5rem 0;
+  /* Espaçamento vertical para melhor tappable area */
+  margin-top: 100px;
+  letter-spacing: 1.3px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.off-screen-menu a:hover {
+  color: #ffd700;
+  transition: 0.4s;
+}
+
+/* icones rede social  */
+.off-screen-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 25px;
+  gap: 20px;
+}
+
+.off-screen-social a {
+  margin: 10px 0;
+  display: inline-flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.off-screen-social a img {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  margin: 0 20px;
+  
+}
+
+/* texto pequeno abaixo dos icones de rede social */
+.marca {
+  margin-top: 25px;
+}
+.marca p {
+  color: rgb(255, 255, 255);
+  font-size: 0.7em;
+}
+
+
+
+
+/* Inicio da section HOME  */
+.home {
+  background-image: url("/img/fundo-mobile.jpg");
+  background-position: center  center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  /*height: 100vh;*/
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 1rem 4rem;
+  text-align: center;
+  letter-spacing: 2.0px;
+}
+
+
+.my-image {
+  background-image: url("/img/outra-imagem-de-fundo.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.my-image img {
+  max-width: 90%;
+  max-height: 90%;
+  height: auto;
+  border-radius: 50%;
+  border: 40px solid rgba(90, 0, 10, 0.10);
+}
+
+
+/* textos abaixo da imagem  */
+.home-content h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.home-content h2 {
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.home-content span {
+  color: yellow;
+  padding: 1px;
+}
+
+
+/* section sobre */
+.sobre {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 1rem 4rem;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.sobre h2,
+.sobre h3,
+.sobre p {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+  padding: auto;
+}
+
+
+.hr1 {
+  height: 30px;
+  border: solid 1px white;
+}
+
+.hr2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+/* Seção projetos */
+.projetos {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0rem 1rem 4rem;
+  text-align: center;
+  letter-spacing: 2.5px;
+}
+
+
+
+/* Seção contato */
+/*.contato {
+  /*background-image: url("/img/contatoDesktop.jpg");*/
+  /*background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1rem 4rem;
+  text-align: center;
+  letter-spacing: 2.5px;
+}
+
+.contato-img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+/* media para telas pequenas */
+@media screen and (max-width: 320px) {
+  .off-screen-menu {
+    width: 100%;
+    right: -107vw;
+  }
+
+  .off-screen-menu.active {
+    right: 0;
+  }
+
+  .home-content h1, .home-content h2, .home-content h3, .home-content p {
+    font-size: smaller;
+    margin-top: 1em;
+  }
+
+  .my-image img {
+    max-width: 75%;
+    border: 20px solid rgba(90, 0, 10, 0.10);
+  }
+
+  .ham-menu {
+    height: 9vw; 
+    width: 9vw;  
+  }
+
+  .sobre {
+    font-size: smaller;
+    text-align: center;
+    justify-content: flex;
+  }
+}
