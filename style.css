@@ -195,7 +195,7 @@ body {
 
 /* Inicio da section HOME  */
 .home {
-  background-image: url("/img/fundo-mobile.jpg");
+  background-image: url("img/fundo-mobile.jpg");
   background-position: center  center;
   background-size: cover;
   background-attachment: fixed;
@@ -213,7 +213,7 @@ body {
 
 
 .my-image {
-  background-image: url("/img/outra-imagem-de-fundo.jpg");
+  background-image: url("img/outra-imagem-de-fundo.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
