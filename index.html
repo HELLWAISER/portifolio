@@ -4,26 +4,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Link para a folha de estilo do Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Script do Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!--cdn maq escrever-->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <!-- Font-->
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
-  <!--cdn -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <!-- script -->
-  <script src="hamburger.js" defer></script>
-  <script src="maqEscrever.js" defer></script>
+  <script src="hamburger.js" defer></script> 
+  <script src="maqEscrever.js" defer></script> 
+  <script src="swiper.js" defer></script>
+  <script src="chamarProjetos.js" defer></script>
+
   <!-- Style css -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="normalize.css">
+
+
   <title>Portifólio</title>
 </head>
 
 <body>
+
+
+
+
+
+
+
+
+
+
   <!--Inicio do Header-->
   <header class="header" id="header">
     <a href="#" class="logo">
-      <img src="img/logo.webp" alt="Logotipo" />
+      <img src="/img/logo.webp" alt="Logotipo" />
     </a>
     <!-- nav bar mobile -->
     <!--Menu hamburguer -->
@@ -31,6 +50,7 @@
       <div class="menu">
         <a href="#home" class="nav-link">Home</a>
         <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
         <a href="#projetos" class="nav-link">Projetos</a>
         <a href="#contato" class="nav-link">Contato</a>
         <!--Icones redes sociais virão aqui-->
@@ -38,17 +58,17 @@
       <div class="off-screen-social">
         <a class="face" href="https://www.linkedin.com/in/vitor-rodrigues-gomes/" target="_blank"
           rel="noopener noreferrer">
-          <img src="img/linkedin.png" alt="LinkedIn" />
+          <img src="/img/linkedin.png" alt="LinkedIn" />
         </a>
         <a class="insta" href="https://www.instagram.com/vitor_rodrigues_dev/" target="_blank"
           rel="noopener noreferrer">
-          <img src="img/insta.png" alt="Instagram" />
+          <img src="/img/insta.png" alt="Instagram" />
         </a>
         <a class="git" href="https://github.com/HELLWAISER" target="_blank" rel="noopener noreferrer">
-          <img src="img/github.png" alt="GitHub" />
+          <img src="/img/github.png" alt="GitHub" />
         </a>
       </div>
-      
+
       <div class="marca">
         <p>Desenvolvido por</p>
         <p>Vitor &#174</p>
@@ -65,6 +85,7 @@
     <nav class="navbar">
       <a href="#home" class="box">Home</a>
       <a href="#sobre" class="box">Sobre</a>
+      <a href="#servicos" class="box">Serviços</a>
       <a href="#projetos" class="box">Projetos</a>
       <a href="#contato" class="box">Contato</a>
     </nav>
@@ -72,7 +93,7 @@
   <!--Inicio section -->
   <section class="home" id="home">
     <div class="my-image" id="my-image">
-      <img src="img/eu.jpeg" alt="minha-imagem" />
+      <img src="/img/eu.jpeg" alt="minha-imagem" />
     </div>
     <div class="home-content">
       <h3>Olá, me chamo</h3>
@@ -85,14 +106,12 @@
     </div>
   </section>
 
-</body>
 
-</html>
+  <section class="sobre" id="sobre">
 
-  
-    <section class="sobre" id="sobre">
+    <div class="apresentacao">
       <h2>Sobre</h2>
-      <h3>Tragetória</h3>
+      <h3 class="destaque">Tragetória</h3>
       <hr class="hr1" />
       <p>Março de 2021...</p>
       <p>
@@ -103,17 +122,140 @@
       </p>
       <hr class="hr1" />
       <p>Junho de 2024</p>
-      <hr class="hr1" />
       <p>Formado em Análise e Desenvolvimento de Sistemas</p>
       <hr class="hr1" />
-      <p>A jornada não termina aqui</p>
-    </section>
+      <p class="destaque">A jornada não termina aqui...</p>
+    </div>
+  </section>
 
-    <section class="projetos" id="projetos">
+  <section class="servicos swiper" id="servicos">
+    <div class="swiper-container">
+      <!-- Wrapper for slides -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide servicos">
+          <h2>Serviços</h2>
+          <img src="/img/frontend.webp" alt="Descrição do servicos 1">
+          <h2>Frond-end</h2>
+          <p>Front-end é a parte do desenvolvimento web que se ocupa da interface e experiência do usuário. </p>
+        </div>
 
-    </section>
+        <div class="swiper-slide servicos">
+          <h2>Serviços</h2>
+          <img src="/img/manutencao.webp" alt="Descrição do servicos 2">
+          <h2>Construção</h2>
+          <p>sites e aplicativos sejam visíveis, funcionais e agradáveis ao navegar em qualquer dispositivo ou
+            navegador.</p>
+
+        </div>
+
+        <div class="swiper-slide servicos">
+          <h2>Serviços</h2>
+          <img src="/img/design.webp" alt="Descrição do servicos 3">
+          <h2>Design</h2>
+          <p>princípios de design gráfico, usabilidade e experiência do usuário, garantindo que a estética e a
+            funcionalidade caminhem juntas</p>
+
+        </div>
+        <!-- ... mais slides conforme necessário -->
+      </div>
+      <hr>
+      <!-- Se necessário, adicionar paginação -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
 
 
-    <section class="contato" id="contato">
 
-    </section>
+
+
+
+
+
+
+
+
+
+
+
+  <section class="projetos" id="projetos">
+    <div class="container">
+      <h2 class="title">Projetos</h2>
+
+
+      <div class="all-buttons" id="">
+        <div class="button-all">
+          <button class="projects-filter-active" data-filter="all">TODOS PROJETOS</button>
+        </div>
+  
+        <div class="projects-nav">
+          <button class="projects-filter" data-filter="web">WEB</button>
+          <button class="projects-filter" data-filter="folders">FOLDERS</button>
+          <button class="projects-filter" data-filter="page">L. PAGE</button>
+        </div>
+      </div>
+
+
+
+      <!-- Aqui vamos adicionar a estrutura para os projetos -->
+      <div class="projects-grid">
+        <!-- Aqui serão listados os projetos -->
+        <!-- Cada projeto deve ter classes correspondentes aos filtros que se aplicam a ele -->
+        
+        <div class="project-item-web show-web">
+          <!-- Conteúdo do projeto Web -->
+          <img src="/img/design.webp" alt="Projeto Web" class="img-web">
+          <div class="project-description">
+            <h5><a href="#" target="_blank">Demo ></a></h5>
+            <h2> - Restaurant</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          </div>
+
+
+
+
+          <div class="icones-tecnologias">
+              <img src="/img/html.png" alt="html-icon" />
+              <img src="/img/css.webp" alt="css-icon" />
+              <img src="/img/js.png" alt="js-icon" />
+          </div>
+          <!-- Outros elementos do projeto Web -->
+        </div>
+
+
+
+
+        <div class="project-item-folders">
+          <!-- Conteúdo do segundo projeto Web -->
+          <img src="/img/manutencao.webp" alt="Projeto folders" class="img-folders">
+          <!-- Outros elementos do projeto Web -->
+        </div>
+
+
+        <div class="project-item-landing-page">
+          <!-- Conteúdo do projeto de folders -->
+          <img src="/img/fundo-mobile.jpg" alt="Projeto landing page" class="img-landing-page">
+          <!-- Outros elementos do projeto de folders -->
+        </div>
+
+
+        <!-- Adicione mais elementos conforme necessário para outros projetos -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="contato" id="contato">
+
+
+
+  </section>
+
+</body>
+
+</html>
